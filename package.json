@@ -1,0 +1,53 @@
+{
+  "name": "node-api-starter",
+  "version": "1.0.0",
+  "description": "Node Express Api Starter",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon --exec babel-node -- src/index.js",
+    "test": "mocha --recursive --require babel-register --timeout 15000",
+    "compile": "$(npm bin)/babel -d lib/ src/",
+    "postinstall": "$(npm bin)/babel -d lib/ src/",
+    "prepublish": "npm run compile"
+  },
+  "keywords": [
+    "jwt",
+    "express",
+    "es6",
+    "axios"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.schibsted.io/next/node-api-starter"
+  },
+  "author": "Kim Wijk",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.14.1",
+    "cors": "^2.7.1",
+    "es6-promisify": "^3.0.0",
+    "express": "^4.13.3",
+    "jsonwebtoken": "^5.4.1",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.2.8",
+    "morgan": "^1.6.1",
+    "nodemailer": "^1.10.0"
+  },
+  "peerDependencies": {
+    "express": "^4.0",
+    "mongoose": "^4.0",
+    "body-parser": "^1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "axios": "^0.7.0",
+    "babel-register": "^6.11.6",
+    "mocha": "^2.3.4"
+  }
+}
